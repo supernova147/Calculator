@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
     <header>
         <h1>Calculator</h1>
     </header>
+<main>
+    <section class="button_layout">
         <div class="cal_display" id="cal_output">
             <p>Display Here.</p>
         </div>
-    <section class="button_layout">
+        <div></div>
+        <div></div>
+        <div></div>
         <div>
-            <button class="cal_buttons" id="button_C">Clear</button>
+            <button class="cal_buttons" id="button_C">Clr</button>
         </div>
         <div>
             <button class="cal_buttons" id="button_pos_neg">+/-</button>
@@ -52,7 +55,7 @@
             <button class="cal_buttons" id="button_-">-</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_1">1</button>
+            <button class="cal_buttons" id="button_1" value="1">1</button>
         </div>
         <div>
             <button class="cal_buttons" id="button_2">2</button>
@@ -64,7 +67,7 @@
             <button class="cal_buttons" id="button_+">+</button>
         </div>
         <div>
-            <button class="cal_buttons" id="space">space</button>
+            <button class="cal_buttons" id="space">placeholder</button>
         </div>
         <div>
             <button class="cal_buttons" id="button_*">*</button>
@@ -76,8 +79,8 @@
             <button class="cal_buttons" id="button_=">=</button>
         </div>
     </section>
-
 </main>
+
 <script src="script.js"></script>
 </body>
 </html>
