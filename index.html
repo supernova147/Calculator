@@ -13,67 +13,67 @@
 <main>
     <section class="button_layout">
         <div class="cal_display" id="cal_output">
-            <p>Enter a calculation!</p>
+            <p id="displayed_output">Enter a calculation!</p>
         </div>
         <div>
-            <button class="cal_buttons" id="button_C">Clr</button>
+            <button class="cal_buttons" id="button_C" onclick="pressed_clear()">Clr</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_pos_neg">+/-</button>
+            <button class="cal_buttons" id="button_pos_neg">special</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_%">%</button>
+            <button class="cal_buttons" id="button_%" value="%">%</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_/">/</button>
+            <button class="cal_buttons" id="button_/" value="/" onclick="pressed_divide()">/</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_7">7</button>
+            <button class="cal_buttons" id="button_7" value="7" onclick="pressed_7()">7</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_8">8</button>
+            <button class="cal_buttons" id="button_8" value="8" onclick="pressed_8()">8</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_9">9</button>
+            <button class="cal_buttons" id="button_9" value="9" onclick="pressed_9()">9</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_*">*</button>
+            <button class="cal_buttons" id="button_*" value="*" onclick="pressed_multiple()">*</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_4">4</button>
+            <button class="cal_buttons" id="button_4" value="4" onclick="pressed_4()">4</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_5">5</button>
+            <button class="cal_buttons" id="button_5" value="5" onclick="pressed_5()">5</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_6">6</button>
+            <button class="cal_buttons" id="button_6" value="6" onclick="pressed_6()">6</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_-">-</button>
+            <button class="cal_buttons" id="button_-" value="-" onclick="pressed_subtract()">-</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_1" value="1">1</button>
+            <button class="cal_buttons" id="button_1" value="1" onclick="pressed_1()">1</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_2">2</button>
+            <button class="cal_buttons" id="button_2" value="2" onclick="pressed_2()">2</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_3">3</button>
+            <button class="cal_buttons" id="button_3" value="3" onclick="pressed_3()">3</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_+">+</button>
+            <button class="cal_buttons" id="button_+" value="+" onclick="pressed_addition()">+</button>
         </div>
         <div>
             <button class="cal_buttons" id="space">color</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_*">*</button>
+            <button class="cal_buttons" id="button_*" value="*" onclick="pressed_multiple()">button</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_.">.</button>
+            <button class="cal_buttons" id="button_." value=".">.</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_=">=</button>
+            <button class="cal_buttons" id="button_=" value="=" onclick="calculate()">=</button>
         </div>
     </section>
 </main>
