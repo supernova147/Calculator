@@ -10,141 +10,164 @@ then the calculation is made with enter.
 So: 2 values have to be saved. num1 & num2
 Edit: 
 */
-let output = document.getElementById('displayed_output');
-
+//Below are the declared variables to enable the change in displayed output
+// as well as capturing errors later on.
+const output = document.getElementById('displayed_output');
+const lastentry = output.innerText(output.length - 1);
+const operators = ['/', '-', '.', '*', '+'];
+//Below are each of the buttons & their related functions. 
 function pressed_0() {
     {
-        let output = document.getElementsByClassName('cal_buttons');
-        output.innerText += '0';
+        output.innerText += '0'; //Adds 0 to the display.
+        //console.log(lastentry); test output
     }
 }
 
 function pressed_1() {
     {
-        let output = document.getElementsByClassName('cal_buttons');
-        output.innerText += '1';
+        output.innerText += '1'; //Adds 1 to the display.
     }
 }
 
 function pressed_2() {
     {
-        let output = document.getElementById('displayed_output');
-        output.append += '2';
+        output.innerText += '2'; //Adds 2 to the display.
     }
 }
 
 function pressed_3() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '3';
+        output.innerText += '3'; //Adds 3 to the display.
     }
 }
 
 function pressed_4() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '4';
+        output.innerText += '4'; //Adds 4 to the display.
     }
 }
 
 function pressed_5() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '5';
+        output.innerText += '5'; //Adds 5 to the display.
     }
 }
 
 function pressed_6() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '6';
+        output.innerText += '6'; //Adds 6 to the display.
     }
 }
 
 function pressed_7() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '7';
+        output.innerText += '7'; //Adds 7 to the display.
     }
 }
 
 function pressed_8() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '8';
+        output.innerText += '8'; //Adds 8 to the display.
     }
 }
 
 function pressed_9() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '9';
+        output.innerText += '9'; //Adds 9 to the display.
     }
 }
 
 function pressed_divide() {
+    // if (output.innerText.includes('/')) //rather than limiting the user, we should just replace the previous operator.
+    // {
+    //     console.log('Already contains a division operator.')
+    //     const lastentry = output.length - 1; 
+    // } //Need to prevent "stacking operators" 
+    if (lastentry.includes(operators)) { 
+        console.log("replace last sign") 
+        output.innerText += 'no'; 
+    }
+    else 
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '/';
+        output.innerText += '/';  //Adds / to the display.
     }
 }
 
 function pressed_multiple() {
+    if (output.innerText.includes('*')) //fix this
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '*';
+        console.log('Already contains a multiplication operator.')
+    }
+    else 
+    {
+        output.innerText += '*';  //Adds * to the display.
     }
 }
 
 function pressed_subtract() {
+    if (output.innerText.includes('-')) //fix this
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '-';
+        console.log('Already contains a subtraction operator.')
+    }
+    else 
+    {
+        output.innerText += '-';  //Adds - to the display.
     }
 }
 
 function pressed_addition() {
+    if (output.innerText.includes('+')) //fix this
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '+';
+        console.log('Already contains an addition operator.')
+    }
+    else 
+    {
+        output.innerText += '+';  //Adds + to the display.
     }
 }
 
 function pressed_percentage() {
+     if (output.innerText.includes('%')) //fix this
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '%';
+        console.log('Already contains a percentage symbol.')
+    }
+    else 
+    {
+        output.innerText += '%';  //Adds % to the display.
     }
 }
 
 function button_decimal() {
-    if (displayed_output.includes('.'))
+    if (output.innerText.includes('.')) //fix this
     {
         console.log('Already contains a decimal.')
     }
     else 
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText += '.';
+        output.innerText += '.';  //Adds . to the display.
     }
 }
 
 function pressed_clear() {
     {
-        let output = document.getElementById('displayed_output');
-        output.innerText = '';
+        output.innerText = '';  //Clears the display via changing the string to a blank space.
     }
 }
 
 function calculate() {
-    if (displayed_output.output.includes('/0'))
+    if (output.innerText.includes('/0'))
     {
-        let output = document.getElementById('displayed_output');
         output.innerText = 'Error cannot divide by 0.';
+    } //Need to prevent an output ending in any operator ie: 1 +
+    else if (lastentry.includes(operators)){ 
+        output.innerText = ('Error, needs another number');
+        await.delay(2000);
+        output.innerText = ('');
     }
-    else 
+// document.getElementById('displayed_output') innerText.charAt(output.length - 1);
+    else
     {
-        output.innerHTML = eval(output.innerText);
+        output.innerText = eval(output.innerText) 
     }
 }
 //Refactor the calculation/Input functions
