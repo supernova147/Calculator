@@ -1,25 +1,13 @@
 /*
-For the calculator to work.. 
-I need each button to capture user input & save it 
-ie: any numeral value & the function has to continue running 
-until an arthimetric value is pressed. 
-(& the decimal point has to be pressed ONCE and then break (maybe a switch statement?)
-then; after an arthmetric value is pressed, the user can enter another number
-then the calculation is made with enter.
-
-So: 2 values have to be saved. num1 & num2
-Edit: 
+Javascript code; perhaps I should've made the buttons 1-9 its own function.
 */
-//Below are the declared variables to enable the change in displayed output
-// as well as capturing errors later on.
+//Below is the declared variable to enable the change in displayed output
 const output = document.getElementById('displayed_output');
-const lastentry = output.innerText(output.length - 1);
-const operators = ['/', '-', '.', '*', '+'];
+
 //Below are each of the buttons & their related functions. 
 function pressed_0() {
     {
         output.innerText += '0'; //Adds 0 to the display.
-        //console.log(lastentry); test output
     }
 }
 
@@ -78,15 +66,10 @@ function pressed_9() {
 }
 
 function pressed_divide() {
-    // if (output.innerText.includes('/')) //rather than limiting the user, we should just replace the previous operator.
-    // {
-    //     console.log('Already contains a division operator.')
-    //     const lastentry = output.length - 1; 
-    // } //Need to prevent "stacking operators" 
-    if (lastentry.includes(operators)) { 
-        console.log("replace last sign") 
-        output.innerText += 'no'; 
-    }
+    if (output.innerText.includes('/', '-', '.', '*', '+')) //Checks if any operators are in the string.
+    {
+        console.log('Already contains an operator.');
+    } 
     else 
     {
         output.innerText += '/';  //Adds / to the display.
@@ -94,10 +77,10 @@ function pressed_divide() {
 }
 
 function pressed_multiple() {
-    if (output.innerText.includes('*')) //fix this
+    if (output.innerText.includes('/', '-', '.', '*', '+')) //Checks if any operators are in the string.
     {
-        console.log('Already contains a multiplication operator.')
-    }
+        console.log('Already contains an operator.');
+    } 
     else 
     {
         output.innerText += '*';  //Adds * to the display.
@@ -105,10 +88,10 @@ function pressed_multiple() {
 }
 
 function pressed_subtract() {
-    if (output.innerText.includes('-')) //fix this
+    if (output.innerText.includes('/', '-', '.', '*', '+')) //Checks if any operators are in the string.
     {
-        console.log('Already contains a subtraction operator.')
-    }
+        console.log('Already contains an operator.');
+    } 
     else 
     {
         output.innerText += '-';  //Adds - to the display.
@@ -116,10 +99,10 @@ function pressed_subtract() {
 }
 
 function pressed_addition() {
-    if (output.innerText.includes('+')) //fix this
+    if (output.innerText.includes('/', '-', '.', '*', '+')) //Checks if any operators are in the string.
     {
-        console.log('Already contains an addition operator.')
-    }
+        console.log('Already contains an operator.');
+    } 
     else 
     {
         output.innerText += '+';  //Adds + to the display.
@@ -127,10 +110,10 @@ function pressed_addition() {
 }
 
 function pressed_percentage() {
-     if (output.innerText.includes('%')) //fix this
+    if (output.innerText.includes('/', '-', '.', '*', '+', '%')) //Checks if any operators are in the string.
     {
-        console.log('Already contains a percentage symbol.')
-    }
+        console.log('Already contains an operator.');
+    } 
     else 
     {
         output.innerText += '%';  //Adds % to the display.
@@ -138,7 +121,7 @@ function pressed_percentage() {
 }
 
 function button_decimal() {
-    if (output.innerText.includes('.')) //fix this
+    if (output.innerText.includes('.')) //Checks if there are any other decimals in the string.
     {
         console.log('Already contains a decimal.')
     }
@@ -155,26 +138,16 @@ function pressed_clear() {
 }
 
 function calculate() {
-    if (output.innerText.includes('/0'))
+    if (output.innerText.includes('/0')) //Prevents user from dividing by 0
     {
-        output.innerText = 'Error cannot divide by 0.';
-    } //Need to prevent an output ending in any operator ie: 1 +
-    else if (lastentry.includes(operators)){ 
-        output.innerText = ('Error, needs another number');
-        await.delay(2000);
-        output.innerText = ('');
+        output.innerText = 'Error cannot divide by 0, please clear';
+    } 
+    try { //if the user's input is clear with no mathematical errors, the result will show.
+        output.innerText = eval(output.innerText);
     }
-// document.getElementById('displayed_output') innerText.charAt(output.length - 1);
-    else
-    {
-        output.innerText = eval(output.innerText) 
+    catch(error){ //an error will display if an incorrect/invalid equation is typed in. 
+        output.innerText = 'Error, please clear';
     }
 }
-//Refactor the calculation/Input functions
 
-//dyanmic array for memory? and then a function to clear the memory.
-// Make the input function a loop
-//percentage button?
-//color button function?
-//special button - maybe an animation?
-//afterwards, may provide additional calc functions ie: exponentials, etc.
+//For me to do later: Refactor the calculation/Input functions; add in additional features; improve calc look.

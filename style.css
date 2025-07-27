@@ -7,7 +7,7 @@
     z-index: relative;
     z-index: 1;
 }
-
+/* Grid was used to layout the buttons. */
 .button_layout {
     display: grid;
     grid-template-columns: 5rem 5rem 5rem 5rem;
