@@ -13,7 +13,7 @@
 <main>
     <section class="button_layout">
         <div class="cal_display" id="cal_output">
-            <p id="displayed_output">Enter a calculation!</p>
+            <p id="displayed_output"></p>
         </div>
         <div>
             <button class="cal_buttons" id="button_C" onclick="pressed_clear()">Clr</button>
@@ -22,7 +22,7 @@
             <button class="cal_buttons" id="button_pos_neg">special</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_%" value="%">%</button>
+            <button class="cal_buttons" id="button_%" value="%" onclick="pressed_percentage()">%</button>
         </div>
         <div>
             <button class="cal_buttons" id="button_/" value="/" onclick="pressed_divide()">/</button>
@@ -67,10 +67,10 @@
             <button class="cal_buttons" id="space">color</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_*" value="*" onclick="pressed_multiple()">button</button>
+            <button class="cal_buttons" id="button_*" value="0" onclick="pressed_0()">0</button>
         </div>
         <div>
-            <button class="cal_buttons" id="button_." value=".">.</button>
+            <button class="cal_buttons" id="button_decimal" value="." onclick="button_decimal()">.</button>
         </div>
         <div>
             <button class="cal_buttons" id="button_=" value="=" onclick="calculate()">=</button>
