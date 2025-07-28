@@ -2,20 +2,32 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(255, 255, 255);
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
     z-index: relative;
     z-index: 1;
 }
 /* Grid was used to layout the buttons. */
+
+h1 {
+    color: purple;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 600;
+}
+
 .button_layout {
     display: grid;
     grid-template-columns: 4rem 4rem 4rem 4rem;
-    grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
-    margin-top: 5rem;
+    grid-template-rows: 3.6rem 3.6rem 3.6rem 3.6rem 3.6rem;
+    margin-top: 5.5rem;
     border: solid black 0.4rem;
     border-radius: 1rem;
     overflow: hidden;
+    background-color: rgb(159, 103, 251);
 }
 
 .cal_display { 
@@ -33,11 +45,13 @@
     grid-column-start: 2;
     grid-column-end: 5;
     overflow: hidden;
+    font-weight: 600;
 }
 
 .cal_buttons:hover {
     background-color: rgb(84, 22, 209);
     transform: scale(1.05);
+    box-shadow: 0 0 3rem rgba(84, 22, 209, 1);
 }
 
 .cal_display { 
@@ -45,16 +59,15 @@
 }
 
 .cal_buttons {
-    background-color: #5bfef9;
+    background-color: #00fff7;
     color: black;
     cursor: pointer;
     width: 4rem;
     height: 3.5rem;
     font-size: 1.2rem;
     border: solid black 0.2rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     align-items: center;
-    overflow: hidden;
 }
 
 header {
