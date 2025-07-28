@@ -6,9 +6,13 @@
     font-weight: 400;
     font-style: normal;
     z-index: relative;
-    z-index: 1;
+    z-index: 0;
 }
 /* Grid was used to layout the buttons. */
+
+body {
+    background-color: black;
+}
 
 h1 {
     color: purple;
@@ -24,7 +28,7 @@ p {
     grid-template-columns: 4rem 4rem 4rem 4rem;
     grid-template-rows: 3.6rem 3.6rem 3.6rem 3.6rem 3.6rem;
     margin-top: 5.5rem;
-    border: solid black 0.4rem;
+    border: solid rgb(53, 0, 102) 0.4rem;
     border-radius: 1rem;
     overflow: hidden;
     background-color: rgb(116, 45, 231);
@@ -35,7 +39,7 @@ p {
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 5;
-    color: black;
+    color: #d6c2ff;
     z-index: 2;
 }
 
