@@ -10,4 +10,9 @@ You can perform addition, subtraction, multiplication and division on the calcul
 For any error message displayed, you will have to clear the screen in order to continue using the calculator.
 
 
-Note: The button "x" & "blank" button do not currently have any function.
+Note: The button "x" & "blank" button do not currently have any function. 
+
+Note 2: encountered a conflict regarding pushing to main. "divergent branches & need to specify how to reconcile them" 
+Resolved using config pull.rebase true. 
+Backup code was stored on a notes document incase of deletion. 
+Issue was resolved & pushing functions normally. (Encountered after hosting the page on Git.)
