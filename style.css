@@ -10,7 +10,7 @@
 /* Grid was used to layout the buttons. */
 .button_layout {
     display: grid;
-    grid-template-columns: 5rem 5rem 5rem 5rem;
+    grid-template-columns: 4rem 4rem 4rem 4rem;
     grid-template-rows: 4rem 4rem 4rem 4rem 4rem;
     margin-top: 5rem;
     border: solid black 0.4rem;
@@ -36,6 +36,11 @@
     overflow: hidden;
 }
 
+.cal_buttons:hover {
+    background-color: rgb(84, 22, 209);
+    transform: scale(1.05);
+}
+
 .cal_display { 
     border: solid 0.3rem black;
 }
@@ -44,8 +49,8 @@
     background-color: #5bfef9;
     color: black;
     cursor: pointer;
-    width: 5rem;
-    height: 4rem;
+    width: 4rem;
+    height: 3.5rem;
     font-size: 1.2rem;
     border: solid black 0.2rem;
     border-radius: 1rem;
