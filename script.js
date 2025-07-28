@@ -1,5 +1,6 @@
 /*
-Javascript code; perhaps I should've made the buttons 1-9 its own function.
+Javascript code; perhaps I should've made the buttons 1-9 its own function. That will be refactored later.
+- Additional future changes include: exponentials, a 'special' effects button, color customization, & a modern 'look.' & better error-handling (esp for decimals adding multiple decimals & signs.)
 */
 //Below is the declared variable to enable the change in displayed output
 const output = document.getElementById('displayed_output');
@@ -109,17 +110,6 @@ function pressed_addition() {
     }
 }
 
-function pressed_percentage() {
-    if (output.innerText.includes('/', '-', '.', '*', '+', '%')) //Checks if any operators are in the string.
-    {
-        console.log('Already contains an operator.');
-    } 
-    else 
-    {
-        output.innerText += '%';  //Adds % to the display.
-    }
-}
-
 function button_decimal() {
     if (output.innerText.includes('.')) //Checks if there are any other decimals in the string.
     {
@@ -149,5 +139,3 @@ function calculate() {
         output.innerText = 'Error, please clear';
     }
 }
-
-//For me to do later: Refactor the calculation/Input functions; add in additional features; improve calc look.
