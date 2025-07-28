@@ -27,7 +27,7 @@ p {
     border: solid black 0.4rem;
     border-radius: 1rem;
     overflow: hidden;
-    background-color: rgb(159, 103, 251);
+    background-color: rgb(116, 45, 231);
 }
 
 .cal_display { 
@@ -55,11 +55,11 @@ p {
 }
 
 .cal_display { 
-    border: solid 0.3rem black;
+    border: solid 0.275rem black;
 }
 
 .cal_buttons {
-    background-color: #00fff7;
+    background-color: #227ce3;
     color: black;
     cursor: pointer;
     width: 4rem;
